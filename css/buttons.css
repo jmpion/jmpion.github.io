@@ -34,6 +34,28 @@ box-shadow: 0 9px rgb(172, 96, 96);
 width: fit-content;
 }
 
+.resultsButton:hover {background-color: #3e438e}
+
+.resultsButton:active {
+background-color: #3e3f8e;
+box-shadow: 0 5px rgb(104, 96, 172);
+transform: translateY(4px);
+}
+
+.resultsButton{
+padding: 15px 25px;
+font-size: 24px;
+text-align: center;
+cursor: pointer;
+outline: none;
+color: #fff;
+background-color: #0407aa;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px rgb(96, 97, 172);
+width: fit-content;
+}
+
 .abnormal:hover {background-color: #8e3e3e}
 
 .abnormal:active {

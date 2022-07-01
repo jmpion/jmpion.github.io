@@ -88,7 +88,7 @@ function oneAudioSaveCSV() {
         csv += '\n';
     })
 
-    document.write(csv);
+    // document.write(csv);
 
     var hiddenElement = document.createElement('a');
     hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
