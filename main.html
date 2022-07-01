@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+        background-color: lightblue;
+        font-family: Helvetica;
+        }
+        
+        #main {
+        width: 80%;
+        max-width: 950px;
+        border: 1px gray solid;
+        margin: auto;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+        }
+        
+        #header {
+        margin-top: 0;
+        border: 2px solid white;
+        padding: 5px;
+        height: 110px;
+        background: white;
+        background-image: url("img/logo_EPFL_IMOS.png");
+        background-size: 900px;
+        width: 900px;
+        background-repeat: no-repeat;
+        color: green;
+        }
+
+        label {
+        display: block;
+        }
+
+        input {
+        width: 30px;
+        margin-left: 20px;
+        }
+
+        button {
+        width: 100px;
+        margin-top: 20px;
+        }
+    </style>
+        
+    <title>Anomalous sounds test</title>
+
+    <!-- LOADING SOME SCRIPTS -->
+    <script type="text/javascript" src="js/score.js"></script>
+    <script type="text/javascript" src="js/sounds.js"></script>
+    <script type="text/javascript" src="js/cfg.js"></script>
+</head>
+
+<body>
+    <div id="main"> <!--open main div-->
+    <div id="header"> <!--open header div-->
+    <!-- <h1>Anomalous sounds test</h1> -->
+    </div><!-- close header div -->
+    
+    <h1>Anomalous sounds test</h1>
+    <form id="form1">
+
+        <h3>For each sound, select if it is abnormal or normal.</h3>
+        <div id="sounds">
+
+        </div>
+        <script>
+            for(i=1; i<=N; i++) {
+                createSoundBlock(i);
+            };
+        </script>
+        
+        <button type="submit" value="Submit">Submit</button>
+        
+        <input type="button" onclick="saveCSV()" value="OK">
+        
+    </form>
+
+    <script>
+        document.getElementById("form1").onsubmit=computeScore;
+    </script>
+
+    <p>Your score is: <span id="grade">__</span></p>
+    </div> <!--Close main div-->
+</body>
+
+</html>

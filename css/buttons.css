@@ -1,0 +1,43 @@
+.normal {
+padding: 15px 25px;
+font-size: 24px;
+text-align: center;
+cursor: pointer;
+outline: none;
+color: #fff;
+background-color: #3e8e41;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px rgb(105, 182, 98);
+width: fit-content;
+}
+
+.normal:hover {background-color: #04AA6D}
+
+.normal:active {
+background-color: #3e8e41;
+box-shadow: 0 5px rgb(105, 182, 98);
+transform: translateY(4px);
+}
+
+.abnormal{
+padding: 15px 25px;
+font-size: 24px;
+text-align: center;
+cursor: pointer;
+outline: none;
+color: #fff;
+background-color: #aa0404;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px rgb(172, 96, 96);
+width: fit-content;
+}
+
+.abnormal:hover {background-color: #8e3e3e}
+
+.abnormal:active {
+background-color: #8e3e3e;
+box-shadow: 0 5px rgb(172, 96, 96);
+transform: translateY(4px);
+}

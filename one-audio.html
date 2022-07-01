@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+        background-color: lightblue;
+        font-family: Helvetica;
+        }
+        
+        #main {
+        width: 80%;
+        max-width: 950px;
+        border: 1px gray solid;
+        margin: auto;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+        }
+        
+        #header {
+        margin-top: 0;
+        border: 2px solid white;
+        padding: 5px;
+        height: 110px;
+        background: white;
+        background-image: url("img/logo_EPFL_IMOS.png");
+        background-size: 900px;
+        width: 900px;
+        background-repeat: no-repeat;
+        color: green;
+        }
+
+        label {
+        display: block;
+        }
+
+        input {
+        width: 30px;
+        margin-left: 20px;
+        }
+
+        button {
+        width: 100px;
+        margin-top: 20px;
+        }
+    </style>
+
+    <style>
+        @import url("css/buttons.css");
+    </style>
+    
+    <title>Anomalous sounds test</title>
+
+    <!-- LOADING SOME SCRIPTS -->
+    <script type='text/javascript' src='js/one-audio-scripts.js'></script>
+    <script type="text/javascript" src="js/cfg.js"></script>
+</head>
+
+<body>
+    <div id="main"> <!--open main div-->
+    <div id="header"> <!--open header div-->
+    <!-- <h1>Anomalous sounds test</h1> -->
+    </div><!-- close header div -->
+    
+    <center>
+        <h1>Anomalous sounds test</h1>
+    </center>
+
+    <center>
+    <div id="soundBlock">
+
+    </div>
+    <div>
+        <button class='normal' onclick="computeResult('normal')">Normal</button>
+        <button class='abnormal' onclick="computeResult('abnormal')">Abnormal</button>
+    </div>
+
+    <div id="result">
+        <p id="resultText">
+
+        </p>
+        <p><span id="score"></span>/<span id="nbTrials"></span></p>
+        <progress id="progressBar" max="50" value="10"></progress>
+    </div>
+    </center>
+    <script>
+        loadSoundBlock();
+    </script>
+    <input type="button" onclick="oneAudioSaveCSV()" value="OK">
+    </div> <!--Close main div-->
+</body>
+
+</html>
