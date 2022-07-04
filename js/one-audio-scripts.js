@@ -1,13 +1,15 @@
-function setupSound(sound) {
+function setupSound(sound, healthCondition) {
+    healthCondition = healthCondition || '';
     const randomI = Math.floor(Math.random() * NB_FILES_IN_EACH_DIR);
     const soundId = randomI.toString().padStart(8, '0');
-    const randomHealthValue = Math.random();
-    var healthCondition = "";
-    if (randomHealthValue < 0.5) {
-        healthCondition = 'normal';
-    }
-    else {
-        healthCondition = 'abnormal';
+    if (healthCondition == '') {
+        const randomHealthValue = Math.random();
+        if (randomHealthValue < 0.5) {
+            healthCondition = 'normal';
+        }
+        else {
+            healthCondition = 'abnormal';
+        }
     }
     var src = `sounds/${level_global}/${healthCondition}/${soundId}.wav`;
     console.log(src);
@@ -16,7 +18,8 @@ function setupSound(sound) {
     return [healthCondition, src];
 }
 
-function loadSoundBlock () {
+function loadSoundBlock (healthCondition) {
+    healthCondition = healthCondition || '';
     const sound = document.createElement("audio");
     sound.controls = 'controls';
     sound.type = 'audio/wav';
@@ -24,12 +27,13 @@ function loadSoundBlock () {
     const randomI = Math.floor(Math.random() * NB_FILES_IN_EACH_DIR);
     const soundId = randomI.toString().padStart(8, '0');
     const randomHealthValue = Math.random();
-    var healthCondition = "";
-    if (randomHealthValue < 0.5) {
-        healthCondition = 'normal';
-    }
-    else {
-        healthCondition = 'abnormal';
+    if (healthCondition == '') {
+        if (randomHealthValue < 0.5) {
+            healthCondition = 'normal';
+        }
+        else {
+            healthCondition = 'abnormal';
+        }
     }
     sound.src = `sounds/${level_global}/${healthCondition}/${soundId}.wav`;
     const soundBlock = document.getElementById('soundBlock');
@@ -37,7 +41,8 @@ function loadSoundBlock () {
     soundBlock.appendChild(sound);
 }
 
-function computeResult (predHealthCondition) {
+function computeResult (predHealthCondition, healthCondition) {
+    healthCondition = healthCondition || '';
     const trueHealthCondition = document.getElementById("sound").getAttribute('health');
     var soundId = document.getElementById("sound").src
     soundId = soundId.substring(soundId.lastIndexOf('/') + 1);
@@ -59,12 +64,11 @@ function computeResult (predHealthCondition) {
     if (url.substring(url.length - 9, url.length) != 'game.html' & numberOfTrials == NB_TRAINING_SAMPLES) {
         document.getElementById("training_on").style.display = "none";
         document.getElementById("ready").style.display = "block";
-        // goToPage('game.html');
+        document.getElementById("welcome").innerHTML = "Now that you're trained, it's time to test your skills!";
     }
     // Changing the sound source and thus health
     var sound = document.getElementById("sound");
-    setupSound(sound);
-    var setup = setupSound(sound);
+    var setup = setupSound(sound, healthCondition);
     var health = setup[0];
     var src = setup[1];
     document.getElementById("sound").setAttribute("health", health);

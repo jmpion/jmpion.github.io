@@ -21,8 +21,14 @@
     
     <center>
         <h1>Anomalous sounds test</h1>
-        <p id="welcome">Let's train before detecting anomalous sounds.</p>
     </center>
+        <p id="welcome">
+            Let's train before detecting anomalous sounds.
+            <br> During this phase, you're only going to listen to recordings from machines operating in <strong>normal conditions</strong>.
+            <br> So just click on the <strong>"Normal"</strong> button once you've listened to a recording.
+            <br> You're going to listen to <strong>6 recordings</strong>.
+        </p>
+    
     
     <center>
     <div id="ready">
@@ -37,8 +43,7 @@
         </div>
     
         <div>
-            <button id="normal" class='normal' onclick="computeResult('normal')">Normal</button>
-            <button id="normal" class='abnormal' onclick="computeResult('abnormal')">Abnormal</button>
+            <button id="normal" class='normal' onclick="computeResult('normal', 'normal')">Normal</button>
         </div>
     
         <div id="result">
@@ -51,7 +56,7 @@
     <progress id="progressBar" max="2" value="1"></progress>
     </center>
     <script>
-        loadSoundBlock();
+        loadSoundBlock("normal");
     </script>
     <button class="homeButton" onclick="goToPage('index.html')" style="float: right;">Home</button>
     </div> <!--Close main div-->
