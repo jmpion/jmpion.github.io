@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @import url("css/layout.css");
+        @import url("css/buttons.css");
+    </style>
+    
+    <title>Anomalous sounds test</title>
+
+    <!-- LOADING SOME SCRIPTS -->
+    <script type='text/javascript' src='js/one-audio-scripts.js'></script>
+    <script type="text/javascript" src="js/cfg.js"></script>
+</head>
+
+<body>
+    <div id="main"> <!--open main div-->
+    <div id="header"> <!--open header div-->
+    <!-- <h1>Anomalous sounds test</h1> -->
+    </div><!-- close header div -->
+    
+    <center>
+        <h1>Anomalous sounds test</h1>
+    </center>
+
+    <center>
+    <div id="soundBlock">
+
+    </div>
+
+    <div>
+        <button class='normal' onclick="computeResult('normal')">Normal</button>
+        <button class='abnormal' onclick="computeResult('abnormal')">Abnormal</button>
+    </div>
+
+    <div id="result">
+        <p id="resultText">
+
+        </p>
+        <p><span id="score"></span>/<span id="nbTrials"></span></p>
+        <progress id="progressBar" max="2" value="1"></progress>
+    </div>
+    </center>
+    <script>
+        loadSoundBlock();
+    </script>
+    <button class="resultsButton" onclick="oneAudioSaveCSV()">Results</button>
+    <button class="homeButton" onclick="goToPage('index.html')" style="float: right;">Home</button>
+    </div> <!--Close main div-->
+</body>
+
+</html>

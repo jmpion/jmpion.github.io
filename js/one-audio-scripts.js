@@ -97,3 +97,7 @@ function oneAudioSaveCSV() {
     hiddenElement.download = 'scores.csv';
     hiddenElement.click();
 }
+
+function goToPage (page) {
+    document.location.href = page;
+}
