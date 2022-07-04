@@ -44,11 +44,11 @@ function computeResult (predHealthCondition) {
     console.log(trueHealthCondition);
     console.log(predHealthCondition);
     if (trueHealthCondition == predHealthCondition) {
-        document.getElementById("resultText").innerHTML = "Yes";
+        document.getElementById("resultText").innerHTML = "Correct!";
         totalScore += 1;
     }
     else {
-        document.getElementById("resultText").innerHTML = "No";
+        document.getElementById("resultText").innerHTML = "Incorrect.";
     }
     numberOfTrials += 1;
     document.getElementById("score").innerHTML = totalScore;

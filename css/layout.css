@@ -1,0 +1,41 @@
+body {
+background-color: lightblue;
+font-family: Helvetica;
+}
+
+#main {
+width: 80%;
+max-width: 950px;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: white;
+border-radius: 10px;
+}
+
+#header {
+margin-top: 0;
+border: 2px solid white;
+padding: 5px;
+height: 110px;
+background: white;
+background-image: url("../img/logo_EPFL_IMOS.png");
+background-size: 900px;
+width: 900px;
+background-repeat: no-repeat;
+color: green;
+}
+
+label {
+display: block;
+}
+
+input {
+width: 30px;
+margin-left: 20px;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
