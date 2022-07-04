@@ -55,6 +55,12 @@ function computeResult (predHealthCondition) {
     document.getElementById("score").innerHTML = totalScore;
     document.getElementById("nbTrials").innerHTML = numberOfTrials;
     
+    const url = window.location.href;
+    if (url.substring(url.length - 9, url.length) != 'game.html' & numberOfTrials == NB_TRAINING_SAMPLES) {
+        document.getElementById("training_on").style.display = "none";
+        document.getElementById("ready").style.display = "block";
+        // goToPage('game.html');
+    }
     // Changing the sound source and thus health
     var sound = document.getElementById("sound");
     setupSound(sound);
@@ -65,6 +71,7 @@ function computeResult (predHealthCondition) {
     document.getElementById("sound").setAttribute("src", src);
     document.getElementById("progressBar").setAttribute("max", numberOfTrials);
     document.getElementById("progressBar").setAttribute("value", totalScore);
+
 }
 
 function storeResult(trueHealthCondition, predHealthCondition, soundId) {
@@ -106,5 +113,5 @@ function goToPage (page) {
 function startGame(level) {
     level_global = level;
     sessionStorage.setItem("level", level);
-    goToPage('game.html');
+    goToPage('training_phase.html');
 }

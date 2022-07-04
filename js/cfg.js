@@ -1,4 +1,5 @@
 var N = 5;
+var NB_TRAINING_SAMPLES = 6
 var totalScore = 0;
 var numberOfTrials = 0;
 var level_global = '';

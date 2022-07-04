@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @import url("css/layout.css");
+        @import url("css/buttons.css");
+    </style>
+    
+    <title>Anomalous sounds test</title>
+
+    <!-- LOADING SOME SCRIPTS -->
+    <script type='text/javascript' src='js/one-audio-scripts.js'></script>
+    <script type="text/javascript" src="js/cfg.js"></script>
+</head>
+
+<body>
+    <div id="main"> <!--open main div-->
+    <div id="header"> <!--open header div-->
+    <!-- <h1>Anomalous sounds test</h1> -->
+    </div><!-- close header div -->
+    
+    <center>
+        <h1>Anomalous sounds test</h1>
+        <p id="welcome">Let's train before detecting anomalous sounds.</p>
+    </center>
+    
+    <center>
+    <div id="ready">
+        <button class='normal' onclick="goToPage('game.html')">Ready?</button>
+    </div>
+    <script>
+        document.getElementById("ready").style.display = "none";
+    </script>
+    <div id="training_on">
+        <div id="soundBlock">
+
+        </div>
+    
+        <div>
+            <button id="normal" class='normal' onclick="computeResult('normal')">Normal</button>
+            <button id="normal" class='abnormal' onclick="computeResult('abnormal')">Abnormal</button>
+        </div>
+    
+        <div id="result">
+            <p id="resultText">
+    
+            </p>
+        </div>
+    </div>
+    <p><span id="score"></span>/<span id="nbTrials"></span></p>
+    <progress id="progressBar" max="2" value="1"></progress>
+    </center>
+    <script>
+        loadSoundBlock();
+    </script>
+    <button class="homeButton" onclick="goToPage('index.html')" style="float: right;">Home</button>
+    </div> <!--Close main div-->
+</body>
+
+</html>

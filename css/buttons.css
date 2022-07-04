@@ -37,7 +37,7 @@ width: fit-content;
 .abnormal:hover {background-color: #8e3e3e}
 
 .abnormal:active {
-background-color: #8e3e3e;
+background-color: #aa0404;
 box-shadow: 0 5px rgb(172, 96, 96);
 transform: translateY(4px);
 }
