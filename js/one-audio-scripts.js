@@ -1,5 +1,5 @@
 function setupSound(sound) {
-    const randomI = Math.floor(Math.random() * 21);
+    const randomI = Math.floor(Math.random() * NB_FILES_IN_EACH_DIR);
     const soundId = randomI.toString().padStart(8, '0');
     const randomHealthValue = Math.random();
     var healthCondition = "";
@@ -9,7 +9,8 @@ function setupSound(sound) {
     else {
         healthCondition = 'abnormal';
     }
-    var src = `sounds/${healthCondition}/${soundId}.wav`;
+    var src = `sounds/${level_global}/${healthCondition}/${soundId}.wav`;
+    console.log(src);
     sound.setAttribute("src", src);
     sound.setAttribute("health", healthCondition);
     return [healthCondition, src];
@@ -20,7 +21,7 @@ function loadSoundBlock () {
     sound.controls = 'controls';
     sound.type = 'audio/wav';
     sound.id = "sound";
-    const randomI = Math.floor(Math.random() * 21);
+    const randomI = Math.floor(Math.random() * NB_FILES_IN_EACH_DIR);
     const soundId = randomI.toString().padStart(8, '0');
     const randomHealthValue = Math.random();
     var healthCondition = "";
@@ -30,7 +31,7 @@ function loadSoundBlock () {
     else {
         healthCondition = 'abnormal';
     }
-    sound.src = `sounds/${healthCondition}/${soundId}.wav`;
+    sound.src = `sounds/${level_global}/${healthCondition}/${soundId}.wav`;
     const soundBlock = document.getElementById('soundBlock');
     sound.setAttribute('health', healthCondition);
     soundBlock.appendChild(sound);
@@ -100,4 +101,10 @@ function oneAudioSaveCSV() {
 
 function goToPage (page) {
     document.location.href = page;
+}
+
+function startGame(level) {
+    level_global = level;
+    sessionStorage.setItem("level", level);
+    goToPage('game.html');
 }

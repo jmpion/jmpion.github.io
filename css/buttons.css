@@ -111,3 +111,27 @@ background-color: #483939;
 box-shadow: 0 5px rgb(99, 96, 96);
 transform: translateY(4px);
 }
+
+/* Level button */
+
+.levelButton{
+padding: 15px 25px;
+font-size: 24px;
+text-align: center;
+cursor: pointer;
+outline: none;
+color: #fff;
+background-color: #8400ff;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px rgb(121, 55, 160);
+width: fit-content;
+}
+
+.levelButton:hover {background-color: #5e1b85}
+
+.levelButton:active {
+background-color: #8d26bd;
+box-shadow: 0 5px rgb(97, 6, 116);
+transform: translateY(4px);
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @import url("css/layout.css");
+        @import url("css/buttons.css");
+    </style>
+    
+    <title>Anomalous sounds test</title>
+
+    <!-- LOADING SOME SCRIPTS -->
+    <script type='text/javascript' src='js/one-audio-scripts.js'></script>
+    <script type="text/javascript" src="js/cfg.js"></script>
+</head>
+
+<body>
+    <div id="main"> <!--open main div-->
+    <div id="header"> <!--open header div-->
+    <!-- <h1>Anomalous sounds test</h1> -->
+    </div><!-- close header div -->
+    
+    <center>
+        <h1>Anomalous sounds test</h1>
+    </center>
+    <div>
+        <p>Please select the level of difficulty.</p>
+    </div>
+    <center>
+    <div>
+        <button class='levelButton' onclick="startGame('Level_1')">Easy</button>
+        <button class='levelButton' onclick="startGame('Level_2')">Normal</button>
+        <button class='levelButton' onclick="startGame('Level_3')">Hard</button>
+    </div>
+    <div>
+        <button class='homeButton' onclick="goToPage('index.html')" style="float: right;">Home</button>
+    </div>
+    </center>
+    </div> <!--Close main div-->
+</body>
+
+</html>
