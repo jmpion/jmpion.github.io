@@ -132,6 +132,8 @@ function startGame(level) {
     //     }
     // }
     machine = level;
+    console.log(machine);
     sessionStorage.setItem("currentMachine", machine);
+    console.log(sessionStorage.getItem("currentMachine"));
     goToPage('training_phase.html');
 }
