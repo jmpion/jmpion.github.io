@@ -120,17 +120,18 @@ function startGame(level) {
     level_global = level;
     sessionStorage.setItem("level", level);
     var machine;
-    if (level == 'Level_1') {
-        machine = 'valve';
-    }
-    else {
-        if (level == 'Level_2') {
-            machine = 'gearbox';
-        }
-        else {
-            machine = 'ToyTrain';
-        }
-    }
+    // if (level == 'Level_1') {
+    //     machine = 'valve';
+    // }
+    // else {
+    //     if (level == 'Level_2') {
+    //         machine = 'gearbox';
+    //     }
+    //     else {
+    //         machine = 'ToyTrain';
+    //     }
+    // }
+    machine = level;
     sessionStorage.setItem("currentMachine", machine);
     goToPage('training_phase.html');
 }

@@ -9,5 +9,5 @@ def rename(level):
             os.rename(f"{dir_path}/{files_list[i]}", f"{dir_path}/{prefix}.wav")
 
 if __name__=="__main__":
-    for level in ["Level_1", "Level_2", "Level_3"]:
+    for level in os.listdir("sounds"):
         rename(level)

@@ -2,6 +2,7 @@ var N = 5;
 var NB_TRAINING_SAMPLES = 6
 var totalScore = 0;
 var numberOfTrials = 0;
+var machines = ['bearing', 'fan', 'gearbox', 'slider', 'ToyCar', 'ToyTrain', 'valve'];
 var level_global = '';
 try {
     level_global = sessionStorage.getItem("level")
