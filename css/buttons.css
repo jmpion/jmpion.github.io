@@ -135,3 +135,27 @@ background-color: #8d26bd;
 box-shadow: 0 5px rgb(97, 6, 116);
 transform: translateY(4px);
 }
+
+/* Skip button */
+
+.skipButton{
+padding: 15px 25px;
+font-size: 24px;
+text-align: center;
+cursor: pointer;
+outline: none;
+color: #fff;
+background-color: #495556;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px rgb(49, 53, 54);
+width: fit-content;
+}
+
+.skipButton:hover {background-color: #537576}
+
+.skipButton:active {
+background-color: #495556;
+box-shadow: 0 5px rgb(49, 53, 54);
+transform: translateY(4px);
+}

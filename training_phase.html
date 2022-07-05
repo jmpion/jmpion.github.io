@@ -25,7 +25,7 @@
         <p id="welcome">
             Let's train before detecting anomalous sounds.
             <br> During this phase, you're only going to listen to recordings from machines operating in <strong>normal conditions</strong>.
-            <br> So just click on the <strong>"Normal"</strong> button once you've listened to a recording.
+            <br> So just click on the <strong>"Next"</strong> button once you've listened to a recording.
             <br> You're going to listen to <strong>6 recordings</strong>.
         </p>
     
@@ -44,7 +44,7 @@
         </div>
     
         <div>
-            <button id="normal" class='normal' onclick="computeResult('normal', 'normal')">Normal</button>
+            <button id="normal" class='normal' onclick="computeResult('normal', 'normal')">Next</button>
         </div>
     
         <div id="result">
@@ -59,6 +59,7 @@
     <script>
         loadSoundBlock("normal");
     </script>
+    <button class="skipButton" onclick="goToPage('game.html')" style="float: left;">Skip</button>
     <button class="homeButton" onclick="goToPage('index.html')" style="float: right;">Home</button>
     </div> <!--Close main div-->
 </body>

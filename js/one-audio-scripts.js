@@ -12,7 +12,6 @@ function setupSound(sound, healthCondition) {
         }
     }
     var src = `sounds/${level_global}/${healthCondition}/${soundId}.wav`;
-    console.log(src);
     sound.setAttribute("src", src);
     sound.setAttribute("health", healthCondition);
     document.getElementById("machineType").innerHTML = sessionStorage.getItem("currentMachine");
@@ -49,8 +48,6 @@ function computeResult (predHealthCondition, healthCondition) {
     var soundId = document.getElementById("sound").src
     soundId = soundId.substring(soundId.lastIndexOf('/') + 1);
     storeResult(trueHealthCondition, predHealthCondition, soundId);
-    console.log(trueHealthCondition);
-    console.log(predHealthCondition);
     if (trueHealthCondition == predHealthCondition) {
         document.getElementById("resultText").innerHTML = "Correct!";
         totalScore += 1;
@@ -120,20 +117,7 @@ function startGame(level) {
     level_global = level;
     sessionStorage.setItem("level", level);
     var machine;
-    // if (level == 'Level_1') {
-    //     machine = 'valve';
-    // }
-    // else {
-    //     if (level == 'Level_2') {
-    //         machine = 'gearbox';
-    //     }
-    //     else {
-    //         machine = 'ToyTrain';
-    //     }
-    // }
     machine = level;
-    console.log(machine);
     sessionStorage.setItem("currentMachine", machine);
-    console.log(sessionStorage.getItem("currentMachine"));
     goToPage('training_phase.html');
 }
